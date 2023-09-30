@@ -48,7 +48,7 @@ fun main() {
         println("Atleta selecionado.")
     } else {
         println("Atleta não selecionado.")
-    }*/
+    }
 
     val segunda: String = "seg"
     val terca: String = "ter"
@@ -64,6 +64,45 @@ fun main() {
         println("Dia de descanso.")
     } else {
         println("Dia de trabalho.")
+    }*/
+
+    println("Informe o peso: ")
+    var entradaDeDados = readln()
+    val peso: Double = entradaDeDados.toDouble()
+
+    println("Informe a altura: ")
+    entradaDeDados = readln()
+    val altura: Double = entradaDeDados.toDouble()
+
+    val imc = peso / (altura * altura)
+
+    val condicaoMagreza: Boolean = imc < 18.5
+    val condicaoPesoNormal: Boolean = imc >= 18.5 && imc <= 24.9
+    val condicaoSobrepeso = imc >= 25.0 && imc <= 29.9
+    val condicaoObesidadeI = imc >= 30.0 && imc <= 34.9
+    val condicaoObesidadeII = imc >= 35.0 && imc <= 39.9
+    val condicaoObesidadeIII = imc >= 40.0
+
+    if (condicaoMagreza) {
+        println("IMC: $imc")
+        println("Magreza")
+    } else if (condicaoPesoNormal) {
+        println("IMC: $imc")
+        println("Peso normal")
+    } else if (condicaoSobrepeso) {
+        println("IMC: $imc")
+        println("Sobrepeso")
+    } else if (condicaoObesidadeI) {
+        println("IMC: $imc")
+        println("Obesidade Grau I")
+    } else if (condicaoObesidadeII) {
+        println("IMC: $imc")
+        println("Obesidade Grau II")
+    } else if (condicaoObesidadeIII) {
+        println("IMC: $imc")
+        println("Obesidade Grau III")
+    } else {
+        println("Erro no processamento, verifique os dados informados.")
     }
 
 }
