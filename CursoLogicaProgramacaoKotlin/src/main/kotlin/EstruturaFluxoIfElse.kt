@@ -20,7 +20,7 @@ fun main() {
        println("Aluno aprovado!")
     } else {
         println("Aluno reprovado!")
-    }*/
+    }
 
     println("------")
 
@@ -48,6 +48,22 @@ fun main() {
         println("Atleta selecionado.")
     } else {
         println("Atleta não selecionado.")
+    }*/
+
+    val segunda: String = "seg"
+    val terca: String = "ter"
+    val quarta: String = "qua"
+    val quinta: String = "qui"
+    val sexta: String = "sex"
+    val sabado: String = "sab"
+    val domingo: String = "dom"
+
+    val dia = sexta
+
+    if (dia == sabado || dia == domingo) {
+        println("Dia de descanso.")
+    } else {
+        println("Dia de trabalho.")
     }
 
 }
