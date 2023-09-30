@@ -1,6 +1,6 @@
 fun main() {
 
-    println("Informe a primeira nota: ")
+    /*println("Informe a primeira nota: ")
     val n1: Double = readln().toDouble()
 
     println("Informe a segunda nota: ")
@@ -20,5 +20,34 @@ fun main() {
        println("Aluno aprovado!")
     } else {
         println("Aluno reprovado!")
+    }*/
+
+    println("------")
+
+    val altura_atleta = 1.75
+    val idade_atleta = 24
+    val sexo_atleta = "F"
+
+    val condicao_altura = altura_atleta >= 1.75
+    val condicao_idade = idade_atleta >= 18 && idade_atleta <= 24
+    val condicao_sexo = sexo_atleta == "F"
+
+    if (! (altura_atleta >= 1.75)) {
+        println("Atleta não atingiu a altura necessária para a seleção do time.")
     }
+
+    if (! condicao_idade) {
+        println("O atleta não tem a idade necessária para a seleção do time.")
+    }
+
+    if (! (sexo_atleta == "F")) {
+        println("O sexo do atleta não corresponde ao desejado para seleção do time.")
+    }
+
+    if (condicao_altura && condicao_idade && condicao_sexo) {
+        println("Atleta selecionado.")
+    } else {
+        println("Atleta não selecionado.")
+    }
+
 }
